@@ -1,0 +1,117 @@
+@import "buttons-base";
+
+.button--default {
+  @include button-style($btn-default-color, $btn-default-bg, $btn-default-border);
+}
+.button-gradient--default {
+  @include button-style($btn-default-color, #E6EBEE, $btn-default-border);
+}
+.button--primary {
+  @include button-style($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+// Success appears as green
+.button--success {
+  @include button-style($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+// Info appears as blue-green
+.button--info {
+  @include button-style($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+// Warning appears as orange
+.button--warning {
+  @include button-style($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+// Danger and error appear as red
+.button--danger {
+  @include button-style($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+.button--default-gradient{
+  background-color: #F8F9FB;
+  background: linear-gradient(to bottom, white, #F8F9FB);
+  border-color: #E6E7EC;
+  color: $color-brand-dark;
+  &:hover,
+  &:active,
+  &:focus{
+    color: lighten($color-brand-dark, 10%);
+  }
+}
+
+.button--brand-gradient{
+  background-color: #27B6D3;
+  background: linear-gradient(to bottom, #27B6D3, #2597A9);
+  border-color: #27B6D3;
+  color: white;
+  &:hover,
+  &:active,
+  &:focus{
+    background-color: #27B6D3;
+    color: darken(white, 10%);
+  }
+}
+
+.button-border{
+  border: 2px solid;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in;
+  background-color: transparent;
+}
+
+.button-border--black{
+  border-color: black;
+  color: black;
+  &:hover,
+  &:active,
+  &:focus{
+    color: white;
+    background-color: black;
+  }
+}
+
+.button-border--white{
+  border-color: white;
+  color: white;
+  &:hover,
+  &:active,
+  &:focus{
+    color: black;
+    background-color: white;
+  }
+}
+
+.button-border--brand{
+  border-color: $color-brand;
+  color: $color-brand;
+  &:hover,
+  &:active,
+  &:focus{
+    color: black;
+    background-color: $color-brand;
+  }
+}
+
+.button-border--blue{
+  color: #21BEFF;
+  border-color: #21BEFF;
+  &:hover,
+  &:active,
+  &:focus{
+    color: white;
+    background-color: #21BEFF;
+  }
+}
+
+.button-border--success{
+  color: $brand-success;
+  border-color: $brand-success;
+  &:hover,
+  &:active,
+  &:focus{
+    color: white;
+    background-color: $brand-success;
+  }
+}
+
+.group-buttons{
+  margin: $base-spacing-unit * 2 0 $base-spacing-unit * 2;
+}

@@ -1,0 +1,28 @@
+.nav-bar{
+  border-bottom: 1px solid $brand-ui;
+  background-color: #FAFAFC;
+  &__link{
+    display: block;
+    padding: $base-spacing-unit $half-spacing-unit $base-spacing-unit - 3;
+    text-align: center;
+    color: $color-brand-dark;
+    border-bottom: 3px solid transparent;
+    margin-right: 2px;
+    &.is-active{
+      border-bottom-color: #FF7E63;
+    }
+  }
+}
+
+.nav-bar--alt__link{
+  border-bottom-color: #F8E9E7;
+}
+
+.profile-area{
+  background-color: #F8F9FB;
+  border-bottom: 1px solid $brand-ui;
+  border-top: 1px solid white;
+  &:last-child{
+    border-bottom: 0;
+  }
+}

@@ -1,0 +1,8 @@
+node_modules
+dist
+assets
+.tmp
+.sass-cache
+.divshot-cache
+bower_components
+test/bower_components

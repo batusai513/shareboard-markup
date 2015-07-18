@@ -1,0 +1,19 @@
+.container--basic,
+.container{
+  max-width: 860px;
+  margin: 0 auto;
+  padding: em(1) 0;
+}
+
+.container{
+  position: relative;
+  margin-bottom: $base-spacing-unit * 2 - 2;
+  @media #{$small} {
+  	padding: em(1) em($base-spacing-unit);
+    margin-bottom: 0;
+  }
+}
+
+.container--white{
+  background-color: #F8F9FB;
+}

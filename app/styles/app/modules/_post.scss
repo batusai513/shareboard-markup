@@ -1,0 +1,31 @@
+.post{
+  border-bottom: 1px solid $brand-ui;
+  border-top: 1px solid white;
+  padding: $half-spacing-unit;
+  &:last-child{
+    border-bottom-color: transparent;
+  }
+  &:first-child{
+    border-top-color: transparent;
+  }
+  & > :last-child{
+    margin-bottom: 0;
+  }
+  &__image{
+    padding-top: $half-spacing-unit + 4;
+  }
+  &__title{
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+  &__comment{
+    border-bottom-color: $brand-ui;
+    margin-right: $half-spacing-unit * -1;
+    &:first-of-type{
+      border-top-color: $brand-ui;
+    }
+    & + &{
+      border-top-color: white;
+    }
+  }
+}

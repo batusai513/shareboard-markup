@@ -11,6 +11,8 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/magnific-popup/dist/magnific-popup.css" />
+    <link rel="stylesheet" href="/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -51,7 +53,7 @@
         </div><div class="grid__item four-sixths">
           <h1 class="epsilon text-center flush">Shareboard</h1>
         </div><div class="grid__item one-sixth text-end">
-          <a href="#" class="icon-two icon-lg color-white"></a>
+          <a href="#create-panel" class="icon-two icon-lg color-white js-panel"></a>
         </div>
       </header>
 
@@ -192,6 +194,87 @@
       </footer>
     </div>
 
+    <div class="mfp-hide">
+      <article id="create-panel" class="panel panel--small panel--default">
+        <form>
+          <header class="panel__head">
+            <h1 class="panel__title">Send to Database</h1>
+          </header>
+          <div class="panel__body">
+            <div class="form-group">
+              <label>Text</label>
+              <textarea class="form-control" cols="10" rows="10">
+
+              </textarea>
+            </div>
+
+            <div class="js-btn-container">
+              <div class="form-group is-hidden" id="attachment-input">
+                <div class="input-group">
+                  <div class="input-group-addon"><span class="icon-clip"></span></div>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group is-hidden" id="share-input">
+                <div class="input-group">
+                  <div class="input-group-addon"><span class="icon-link"></span></div>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="grid push--bottom">
+                <div class="grid__item one-half">
+                  <button data-target="#attachment-input" class="button button--full button--default-gradient button--small js-btn-show">
+                    <span class="icon-clip"></span> Attachment
+                  </button>
+                </div><div class="grid__item one-half">
+                  <button data-target="#share-input" class="button button--full button--default-gradient button--small js-btn-show">
+                    <span class="icon-link"></span> Share link
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <label>Tags</label>
+            <div class="input-group">
+              <div class="input-group-addon"><span class="icon-tag"></span></div>
+              <input data-role="tagsinput" placeholder="Separate tags with commas" id="tags" type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="panel__body">
+            <div class="form-group">
+              <input id="private" type="checkbox">
+              <label for="private">Private</label>
+              <p>Available only to you</p>
+              <input id="private-available-access" type="radio" name="private-available-only">
+              <label for="private-available-access">Access</label>
+              <input id="private-available-sql" type="radio" name="private-available-only">
+              <label for="private-available-sql">SQL</label>
+            </div>
+
+            <div class="form-group">
+              <input id="public" type="checkbox">
+              <label for="public">Public</label>
+              <p>You whole team can see this info</p>
+              <input id="public-available-access" type="radio" name="public-available-only">
+              <label for="public-available-access">Access</label>
+              <input id="public-available-sql" type="radio" name="public-available-only">
+              <label for="public-available-sql">SQL</label>
+            </div>
+          </div>
+          <div class="panel__footer">
+            <div class="grid">
+              <div class="grid__item one-half">
+                <button class="button button--small button--default-gradient button--full">Cancel</button>
+              </div><div class="grid__item one-half">
+                <button class="button button--small button--brand-gradient button--full" type="submit">Submit</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </article>
+    </div>
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -205,10 +288,14 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
+    <script src="/bower_components/caret/jquery.caret.js"></script>
+    <script src="/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
+    <script src="scripts/button-show.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>

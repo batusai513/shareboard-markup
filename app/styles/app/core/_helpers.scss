@@ -2,7 +2,9 @@
 .float-end { float: $end; }
 .float-none { float: none; }
 
-
+.is-hidden{
+  display: none;
+}
 // Position elements
 .align-center,
 %align-center {

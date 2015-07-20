@@ -32,7 +32,8 @@
   color: $color-brand-dark;
   &:hover,
   &:active,
-  &:focus{
+  &:focus,
+  &.is-active{
     color: lighten($color-brand-dark, 10%);
   }
 }
@@ -44,7 +45,8 @@
   color: white;
   &:hover,
   &:active,
-  &:focus{
+  &:focus,
+  &.is-active{
     background-color: #27B6D3;
     color: darken(white, 10%);
   }

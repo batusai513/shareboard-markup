@@ -1,0 +1,20 @@
+.bootstrap-tagsinput{
+  width: 100%;
+  border-radius: 0 4px 4px 0;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+.bootstrap-tagsinput .tag{
+  background-color: #FF7E63;
+  padding: 0.1em 0.4em 0.1em 0.8em;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+.bootstrap-tagsinput .tag [data-role="remove"]{
+  margin-left: 2px;
+}
+
+.bootstrap-tagsinput .tag [data-role="remove"]:after{
+  content: "×"
+}

@@ -150,5 +150,5 @@ $panel-background-color-default:         #fff !default;
 }
 
 .panel--default{
-  @include panel-variant($brand-ui, inherit, #F8F9FB);
+  @include panel-variant($brand-ui, $color-brand, #F8F9FB);
 }

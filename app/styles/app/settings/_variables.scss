@@ -104,7 +104,7 @@ $input-color:                    #9B9B9B;
 $input-border-width:             1px;
 $input-border:                   #EAEAEA;
 $input-border-radius:            $border-radius-base;
-$input-border-focus:             #66afe9;
+$input-border-focus:             $color-brand;
 $input-color-placeholder:        #cccccc;
 $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2)) + ($button-border-width * 2);
 $input-height-large:             (floor($font-size-base * $line-height-base) + ($padding-large-vertical * 2));

@@ -13,6 +13,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/magnific-popup/dist/magnific-popup.css" />
     <link rel="stylesheet" href="/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" />
+    <link rel="stylesheet" href="/bower_components/jquery.scrollbar/jquery.scrollbar.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -237,6 +238,117 @@
       </footer>
     </div>
 
+    <div class="mfp-hide">
+      <article id="create-panel" class="panel panel--small panel--default mfp-with-anim">
+        <form>
+          <header class="panel__head">
+            <h1 class="panel__title">Send to Database</h1>
+          </header>
+          <div class="panel__body">
+            <div class="form-group">
+              <label class="color-brand text-large">Text</label>
+              <textarea class="form-control textarea-scrollbar database-textarea scrollbar-rail" cols="10" rows="10"></textarea>
+            </div>
+
+            <div class="js-btn-container">
+              <div class="form-group is-hidden has-feedback" id="attachment-input">
+                <div class="input-group">
+                  <div class="input-group-addon"><span class="icon-clip"></span></div>
+                  <input type="text" class="form-control">
+                </div>
+                <span class="icon-close form-control-feedback js-control-clear"></span>
+              </div>
+              <div class="form-group is-hidden has-feedback  has-feedback" id="share-input">
+                <div class="input-group">
+                  <div class="input-group-addon"><span class="icon-link"></span></div>
+                  <input type="text" class="form-control">
+                </div>
+                <span class="icon-close form-control-feedback js-control-clear"></span>
+              </div>
+
+              <div class="grid push--bottom">
+                <div class="grid__item one-half">
+                  <button data-target="#attachment-input" class="button button--full button--default-gradient button--small js-btn-show">
+                    <span class="icon-clip"></span> Attachment
+                  </button>
+                </div><div class="grid__item one-half">
+                  <button data-target="#share-input" class="button button--full button--default-gradient button--small js-btn-show">
+                    <span class="icon-link"></span> Share link
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <label class="color-brand text-large">Tags</label>
+            <div class="input-group">
+              <div class="input-group-addon"><span class="icon-tag"></span></div>
+              <input data-role="tagsinput" placeholder="Separate tags with commas" id="tags" type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="panel__body">
+            <div class="form-group">
+              <input class="custom-input" id="private" type="checkbox">
+              <label class="custom-input__label" for="private"></label>
+              <label class="color-brand" for="private">Private</label>
+              <p>Available only to you</p>
+              <input class="custom-input" id="private-available-access" type="radio" name="private-available-only">
+              <label class="push--left custom-input__label" for="private-available-access"></label>
+              <label for="private-available-access">Access</label>
+              <input class="custom-input" id="private-available-sql" type="radio" name="private-available-only">
+              <label class="push--left custom-input__label" for="private-available-sql"></label>
+              <label for="private-available-sql">SQL</label>
+            </div>
+
+            <div class="form-group">
+              <input class="custom-input" id="public" type="checkbox">
+              <label class="custom-input__label" for="public"></label>
+              <label class="color-brand" for="public">Public</label>
+              <p>You whole team can see this info</p>
+              <input class="custom-input" id="public-available-access" type="radio" name="public-available-only">
+              <label class="push--left custom-input__label" for="public-available-access"></label>
+              <label for="public-available-access">Access</label>
+              <input class="custom-input" id="public-available-sql" type="radio" name="public-available-only">
+              <label class="push--left custom-input__label" for="public-available-sql"></label>
+              <label for="public-available-sql">SQL</label>
+            </div>
+          </div>
+          <div class="panel__footer">
+            <div class="grid">
+              <div class="grid__item one-half">
+                <button class="button button--small button--default-gradient button--full">Cancel</button>
+              </div><div class="grid__item one-half">
+                <button class="button button--small button--brand-gradient button--full" type="submit">Submit</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </article>
+
+      <article id="shared-in" class="panel panel--small panel--alt mfp-with-anim">
+        <header class="panel__head panel__head--large">
+          <p class="flush">Shared in:</p>
+          <h1 class="panel__title weight-bold">What is Credit RWA?</h1>
+        </header>
+        <div class="panel__body">
+          <p>
+            <a href="#">http://shareboard/5D2XTZZSG</a>
+          </p>
+        </div>
+      </article>
+
+      <article id="attachment-in" class="panel panel--small panel--alt mfp-with-anim">
+        <header class="panel__head panel__head--large">
+          <p class="flush">Attachment in:</p>
+          <h1 class="panel__title weight-bold">What is Credit RWA?</h1>
+        </header>
+        <div class="panel__body">
+          <div class="panel__body-wrap">
+            <img src="images/chart.png" alt="chart">
+          </div>
+        </div>
+      </article>
+    </div>
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -253,11 +365,13 @@
     <script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
     <script src="/bower_components/caret/jquery.caret.js"></script>
     <script src="/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
+    <script src="/bower_components/jquery.scrollbar/jquery.scrollbar.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/button-show.js"></script>
+    <script src="scripts/control-clear.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>

@@ -3,8 +3,7 @@ $panel-text-color:                       inherit !default;
 $panel-background-color-default:         #fff !default;
 
 @mixin panel-variant($border, $heading-text-color, $bg-color, $invert: false) {
-  border-color: transparent;
-  background-color: $bg-color;
+  border-color: $border;
   @if $invert == true {
     // .panel__body{
     //   background-color: $bg-color;
@@ -136,7 +135,7 @@ $panel-background-color-default:         #fff !default;
 
 .panel--small{
   @extend .panel--center;
-  max-width: 400px;
+  max-width: 320px;
 }
 
 .panel--medium{
@@ -151,4 +150,21 @@ $panel-background-color-default:         #fff !default;
 
 .panel--default{
   @include panel-variant($brand-ui, $color-brand, #F8F9FB);
+  background-color: #F8F9FB;
+}
+
+.panel--alt{
+  @include panel-variant($brand-ui, $text-color, white);
+  .panel__body{
+    background-color: #F8F9FB;
+  }
+}
+
+.panel__body-wrap{
+  border: 1px solid $brand-ui;
+}
+
+.database-textarea{
+  height: 174px!important;
+  box-shadow: none;
 }

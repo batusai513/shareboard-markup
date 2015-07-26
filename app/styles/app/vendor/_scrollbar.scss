@@ -1,0 +1,27 @@
+.scrollbar-rail > .scroll-content.scroll-scrolly_visible{
+  box-shadow: none;
+}
+
+.scroll-textarea > .scroll-content > textarea{
+  padding: $half-spacing-unit;
+}
+
+.scrollbar-rail > .scroll-element .scroll-bar{
+  background-color: $brand-ui;
+  box-shadow: none;
+  max-height: 60px;
+}
+
+.scrollbar-rail > .scroll-element .scroll-element_outer:hover .scroll-element_size{
+  background-color: #999;
+}
+
+.scrollbar-rail > .scroll-element .scroll-element_outer:hover .scroll-bar{
+  box-shadow: none;
+}
+
+.scrollbar-rail > .scroll-element.scroll-y .scroll-bar {
+  left: 2px;
+  width: 8px;
+  border-radius: 6px;
+}

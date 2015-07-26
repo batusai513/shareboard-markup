@@ -18,6 +18,11 @@
     font-weight: 500;
     margin-bottom: 0;
   }
+  &__edit{
+    margin-top: $half-spacing-unit;
+    display: inline-block;
+    color: $color-brand-dark;
+  }
   &__comment{
     border-bottom-color: $brand-ui;
     margin-right: $half-spacing-unit * -1;
@@ -29,3 +34,4 @@
     }
   }
 }
+

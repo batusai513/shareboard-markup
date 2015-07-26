@@ -76,7 +76,7 @@ img.full-width,
 %weight-normal { font-weight: 400; }
 
 .weight-semibold,
-%weight-semibold { font-weight: 600; }
+%weight-semibold { font-weight: 500; }
 
 .weight-bold,
 %weight-bold { font-weight: 700; }
@@ -89,6 +89,8 @@ img.full-width,
 
 // All-caps text
 .text-uppercase { text-transform: uppercase; }
+
+.text-underline{text-decoration: underline;}
 
 .vertical-middle{
   vertical-align: middle;

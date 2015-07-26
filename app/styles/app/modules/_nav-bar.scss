@@ -1,6 +1,7 @@
 .nav-bar{
   border-bottom: 1px solid $brand-ui;
   background-color: #FAFAFC;
+  background-image: linear-gradient(to bottom, white, #FAFAFC);
   &__link{
     display: block;
     padding: $base-spacing-unit $half-spacing-unit $base-spacing-unit - 3;
@@ -18,8 +19,11 @@
   border-bottom-color: #F8E9E7;
 }
 
-.profile-area{
+.profile-top-area{
   background-color: #F8F9FB;
+}
+
+.profile-area{
   border-bottom: 1px solid $brand-ui;
   border-top: 1px solid white;
   &:last-child{

@@ -2,13 +2,8 @@
   background-color: #F0F6F7;
   background-image: linear-gradient(#F0F6F7, #FFFFFF);
   border-top: 1px solid $brand-ui;
-	padding: $half-spacing-unit;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-  height: $base-spacing-unit * 2;
-	@media #{$small} {
-		position: static;
-    height: auto;
-	}
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: $half-spacing-unit;
 }
